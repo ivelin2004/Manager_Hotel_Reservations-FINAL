@@ -6,6 +6,8 @@ namespace Manager_Hotel_Reservations.Models
     {
         //da se napravi crud na tozi klas , ot scaffold item ...
         [Required]
+        [Display(Name = "Capacity ")]
+        [DataType(DataType.Text)]
         public int Capacity { get; set; }
 
 		[Display(Name = "Room Type ")]
