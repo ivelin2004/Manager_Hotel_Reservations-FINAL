@@ -6,22 +6,27 @@ namespace Manager_Hotel_Reservations.Models
     {
 		[Display(Name = "First Name")]
 		[DataType(DataType.Text)]
-		public string? FirstName { get; set; }
-
+        [Required]
+        public string? FirstName { get; set; }
+		[Required]
 		[Display(Name = "Last Name")]
 		[DataType(DataType.Text)]
-		public string?LastName { get; set; }
+        
+        public string?LastName { get; set; }
 
 		[Display(Name = "Phone Number")]
-		[DataType(DataType.PhoneNumber)]
+        [Required]
+        [DataType(DataType.PhoneNumber)]
 		public int Number { get; set; }
 
 		[Display(Name = "Email Address")]
 		[DataType(DataType.EmailAddress)]
-		public string? Email { get; set; }
+        [Required]
+        public string? Email { get; set; }
 		[Display(Name = "Is Adult")]
 		[DataType(DataType.Text)]
-		public bool IsAdult { get; set; } //trqbva da se napravi method za licata nad 18 godini da se schitat za vuzraastni
+        [Required]
+        public bool IsAdult { get; set; } //trqbva da se napravi method za licata nad 18 godini da se schitat za vuzraastni
 
         /*
         public Clients(string firstName, string lastName, int number, string email, bool isAdult)

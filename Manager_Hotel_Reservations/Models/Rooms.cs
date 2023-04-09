@@ -4,28 +4,35 @@ namespace Manager_Hotel_Reservations.Models
 {
     public class Rooms:Class_Id
     {
-		//da se napravi crud na tozi klas , ot scaffold item ...
-		public int Capacity { get; set; }
+        //da se napravi crud na tozi klas , ot scaffold item ...
+        [Required]
+        public int Capacity { get; set; }
 
 		[Display(Name = "Room Type ")]
 		[DataType(DataType.MultilineText)]
-		public string? RoomType { get; set; }
+        [Required]
+        public string? RoomType { get; set; }
 
 		[Display(Name = "Is Free")]
 		[DataType(DataType.Text)]
-		public bool IsFree { get; set; }
+        [Required]
+        public bool IsFree { get; set; }
 
 		[Display(Name = "Price Bed Adult")]
 		[DataType(DataType.Currency)]
-		public decimal PricePerOccupiedBedAdult { get; set; }
+        [Required]
+        public decimal PricePerOccupiedBedAdult { get; set; }
 
 		[Display(Name = "Price Bed Children")]
 		[DataType(DataType.Currency)]
-		public decimal PricePerOccupiedBedChildren { get; set; }
+        [Required]
+        public decimal PricePerOccupiedBedChildren { get; set; }
 
 		[Display(Name = "Number")]
 		[DataType(DataType.Text)]
-		public int Number { get; set; }
+        [Required]
+        
+        public int Number { get; set; }
     }
 }
 

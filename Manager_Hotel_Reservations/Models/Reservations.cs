@@ -6,29 +6,37 @@ namespace Manager_Hotel_Reservations.Models
 	{
 		[Display(Name = "Reserved Room")]
 		[DataType(DataType.Text)]
-		public int ReservedRoom { get; set; }
-		public string? User { get; set; }
-		public string? Clients { get; set; }
+        [Required]
+        public int ReservedRoom { get; set; }
+        [Required]
+        public string? User { get; set; }
+        [Required]
+        public string? Clients { get; set; }
 
 		[Display(Name = "Check In  Date")]
 		[DataType(DataType.Date)]
-		public DateTime CheckInDate { get; set; }
+        [Required]
+        public DateTime CheckInDate { get; set; }
 
 		[Display(Name = "Check Out  Date")]
 		[DataType(DataType.Date)]
-		public DateTime CheckOutDate { get; set; }
+        [Required]
+        public DateTime CheckOutDate { get; set; }
 
 		[Display(Name = "Breakfast Included")]
 		[DataType(DataType.Text)]
-		public bool BreakfastIncluded { get; set; }
+        [Required]
+        public bool BreakfastIncluded { get; set; }
 
 		[Display(Name = "All Inclusive")]
 		[DataType(DataType.Text)]
-		public bool AllInclusive { get; set; }
+        [Required]
+        public bool AllInclusive { get; set; }
 
 		[Display(Name = "Amount To Pay")]
 		[DataType(DataType.Currency)]
-		public bool AmountToPay { get; set; }
+        [Required]
+        public bool AmountToPay { get; set; }
 		/*public decimal AmountDue
 		{
 			get
